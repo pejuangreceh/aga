@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2022 at 03:11 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Generation Time: Sep 16, 2022 at 05:49 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -102,6 +102,14 @@ CREATE TABLE `informasi` (
   `id_user` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `informasi`
+--
+
+INSERT INTO `informasi` (`id_informasi`, `tanggal`, `subject`, `pesan`, `status`, `id_user`) VALUES
+(3, '2022-09-14 15:51:20', 'MARKICOB', 'INI ADALAH VIEW\r\nCOBA DI LIHAT SAMPE BAWAH\r\nAKU GATAU', '1', 'K0008'),
+(4, '2022-09-14 15:51:38', 'BABAYO', 'BABAYO\r\nBBBBABAYO\r\nHUEKK', '1', 'K0008');
+
 -- --------------------------------------------------------
 
 --
@@ -159,7 +167,11 @@ INSERT INTO `karyawan` (`nik`, `nama`, `email`, `alamat`, `jk`, `id_bagian_dept`
 ('K0015', 'teknisi', 'teknisi@gmail.com', 'JL. TEKNISI', 'LAKI-LAKI', 5, 4),
 ('K0016', 'Yohana Adella', 'elloyyabest02@gmail.com', 'SAWOJAJAR', 'PEREMPUAN', 5, 3),
 ('K0017', 'Yabes', 'elloyyabest@gmail.com', 'PANDAN', 'LAKI-LAKI', 5, 3),
-('K0018', 'Gayus Reinaldy', 'gayusreinaldy@gmail.com', 'PANDAN', 'LAKI-LAKI', 5, 1);
+('K0018', 'Gayus Reinaldy', 'gayusreinaldy@gmail.com', 'PANDAN', 'LAKI-LAKI', 5, 1),
+('K0019', 'yabes baru', 'asdasd@gmail.com', 'YESSS', 'PEREMPUAN', 5, 4),
+('K0020', 'anton', 'anton@gmail.com', 'PANDAN JUGAK', 'LAKI-LAKI', 6, 2),
+('K0021', 'Garry', 'garry@gmail.com', 'SUMBERSARI', 'LAKI-LAKI', 5, 1),
+('K0022', 'Kayla', 'key@gmail.com', 'PANDAN', 'LAKI-LAKI', 6, 3);
 
 -- --------------------------------------------------------
 
@@ -432,9 +444,12 @@ INSERT INTO `user` (`id_user`, `name`, `username`, `email`, `password`, `level`,
 (16, '', 'K0014', 'user@gmail.com', 'user', 'USER', '', '', ''),
 (17, '', 'K0015', 'teknisi@gmail.com', 'teknisi', 'TEKNISI', '', '', ''),
 (18, '', 'K0014', 'user@gmail.com', 'test', 'USER', '', '', ''),
-(20, 'Yohana Adella', 'K0016', 'elloyyabest02@gmail.com', '123456', 'USER', 'PT BPR Trikarya Waranugraha', 'Sukun', '3'),
-(23, 'Yabes', 'K0017', 'elloyyabest@gmail.com', '123456', 'USER', 'pandan', 'pandan', '3'),
-(26, 'Gayus Reinaldy', 'K0018', 'gayusreinaldy@gmail.com', '123456', 'USER', 'pandan', 'pandan', '1');
+(20, '', 'K0016', 'elloyyabest02@gmail.com', '123456', 'USER', 'PT BPR Trikarya Waranugraha', 'Sukun', '3'),
+(23, '', 'K0017', 'elloyyabest@gmail.com', '123456', 'USER', 'pandan', 'pandan', '3'),
+(26, '', 'K0018', 'gayusreinaldy@gmail.com', '123456', 'USER', 'pandan', 'pandan', '1'),
+(27, '', 'K0020', 'anton@gmail.com', '123456', 'USER', 'PT PENULIS CERDAS', 'pandan', '2'),
+(28, '', 'K0021', 'garry@gmail.com', '123444', 'USER', 'PT BPR Trikarya Waranugraha', 'Sumbersari', ''),
+(29, '', 'K0022', 'key@gmail.com', '123456', 'USER', 'PT PENULIS CERDAS', 'Sukun', '2');
 
 --
 -- Indexes for dumped tables
@@ -544,7 +559,7 @@ ALTER TABLE `history_feedback`
 -- AUTO_INCREMENT for table `informasi`
 --
 ALTER TABLE `informasi`
-  MODIFY `id_informasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_informasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `jabatan`
@@ -580,7 +595,7 @@ ALTER TABLE `tracking`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
