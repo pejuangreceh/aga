@@ -1,0 +1,18 @@
+tambah 1 role (kepala divisi)
+tampilkan lampiran 
+- kantor mana yang paling banyak rusak?
+- kerusakan apa yang paling banyak?
+Query kerusakan terbanyak
+SELECT ticket.id_sub_kategori,sub_kategori.nama_sub_kategori , COUNT(ticket.id_sub_kategori) AS jumlah FROM ticket LEFT JOIN sub_kategori ON sub_kategori.id_sub_kategori = ticket.id_sub_kategori GROUP BY ticket.id_sub_kategori ORDER BY jumlah DESC
+
+Query kantor dengan kerusakan terbanyak berdasarkan email ticket
+SELECT t.email_user,u.kantor, COUNT(u.kantor) AS jumlah FROM ticket t LEFT JOIN user u ON t.email_user = u.email GROUP BY u.kantor ORDER BY u.kantor DESC
+
+
+NEW
+tambah field data kantor dan cabang pada menu tambah user lewat admin - done (tambahan id_jabatan)
+pada menu news dibuat tampilan subjectnya saja, biar bisa di klik dan keluar detailnya
+NEW API KEY
+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
+OLD API KEY
+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
