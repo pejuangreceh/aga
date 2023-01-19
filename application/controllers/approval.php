@@ -98,7 +98,7 @@ class Approval extends CI_Controller
         } else {
             // NOTIFIKASI EMAIL
             require_once("vendor/autoload.php");
-            $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
+            $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
 
             $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
                 new GuzzleHttp\Client(),
@@ -183,7 +183,7 @@ class Approval extends CI_Controller
         } else {
             // NOTIFIKASI EMAIL
             require_once("vendor/autoload.php");
-            $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
+            $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
 
             $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
                 new GuzzleHttp\Client(),

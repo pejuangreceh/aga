@@ -193,28 +193,28 @@
 						$hasil_diperbaiki = $u_kurang_diperbaiki * $u_laki_laki_diperbaiki * $u_hardware_diperbaiki * $u_tidak_diperbaiki;
 						$hasil_diganti = $u_kurang_diganti * $u_laki_laki_diganti * $u_hardware_diganti * $u_tidak_diganti;
 						// pengerjaan
-						echo 'P : diganti = ' . $diganti . ' / ' . ($diganti + $diperbaiki) . ' = ' . $diganti_rata . '<br>';
-						echo 'P : diperbaiki = ' . $diperbaiki . ' / ' . ($diganti + $diperbaiki) . ' = ' . $diperbaiki_rata . '<br>';
-						// pengerjaan
-						echo '< 1 minggu | ganti = ' . $p_kurang_diganti . ' / ' . $p_kurang_diganti + $p_kurang_diperbaiki . ' = ' . $u_kurang_diganti . '<br>';
-						echo '< 1 minggu | baik = ' . $p_kurang_diperbaiki . ' / ' . $p_kurang_diganti + $p_kurang_diperbaiki . ' = ' . $u_kurang_diperbaiki . '<br>';
-						echo '>= minggu | ganti = ' . $p_lebih_diganti . ' / ' . $p_lebih_diganti + $p_lebih_diperbaiki . ' = ' . $p_lebih_diganti / ($p_lebih_diganti + $p_lebih_diperbaiki) . '<br>';
-						echo '>= minggu | baik = ' . $p_lebih_diperbaiki . ' / ' . $p_lebih_diganti + $p_lebih_diperbaiki . ' = ' . $p_lebih_diperbaiki / ($p_lebih_diganti + $p_lebih_diperbaiki) . '<br>';
-						// jenis kelamin
-						echo 'laki laki | ganti = ' . $jk_laki_laki_diganti . ' / ' . $jk_laki_laki_diganti + $jk_laki_laki_diperbaiki  . ' = ' . $u_laki_laki_diganti . '<br>';
-						echo 'laki laki | baik = ' . $jk_laki_laki_diperbaiki . ' / ' . $jk_laki_laki_diganti + $jk_laki_laki_diperbaiki  . ' = ' . $u_laki_laki_diperbaiki  . '<br>';
-						echo 'perempuan | ganti = ' . $jk_perempuan_diganti . ' / ' . $jk_perempuan_diganti + $jk_perempuan_diperbaiki  . ' = ' . $jk_perempuan_diganti / ($jk_perempuan_diganti + $jk_perempuan_diperbaiki) . '<br>';
-						echo 'perempuan | baik = ' . $jk_perempuan_diperbaiki . ' / ' . $jk_perempuan_diganti + $jk_perempuan_diperbaiki  . ' = ' . $jk_perempuan_diperbaiki / ($jk_perempuan_diganti + $jk_perempuan_diperbaiki) . '<br>';
-						// jenis kelamin
-						echo 'software | ganti = ' . $t_software_diganti . ' / ' . $t_software_diganti + $t_software_diperbaiki  . ' = ' . $t_software_diganti / ($t_software_diganti + $t_software_diperbaiki) . '<br>';
-						echo 'software | baik = ' . $t_software_diperbaiki . ' / ' . $t_software_diganti + $t_software_diperbaiki  . ' = ' . $t_software_diperbaiki / ($t_software_diganti + $t_software_diperbaiki) . '<br>';
-						echo 'hardware | ganti = ' . $t_hardware_diganti . ' / ' . $t_hardware_diganti + $t_hardware_diperbaiki  . ' = ' . $u_hardware_diganti . '<br>';
-						echo 'hardware | baik = ' . $t_hardware_diperbaiki . ' / ' . $t_hardware_diganti + $t_hardware_diperbaiki  . ' = ' . $u_hardware_diperbaiki . '<br>';
-						// feedback
-						echo 'puas | ganti = ' . $f_puas_diganti . ' / ' . $f_puas_diganti + $f_puas_diperbaiki  . ' = ' . $f_puas_diganti / ($f_puas_diganti + $f_puas_diperbaiki) . '<br>';
-						echo 'puas | baik = ' . $f_puas_diperbaiki . ' / ' . $f_puas_diganti + $f_puas_diperbaiki  . ' = ' . $f_puas_diperbaiki / ($f_puas_diganti + $f_puas_diperbaiki) . '<br>';
-						echo 'tidak | ganti = ' . $f_tidak_diganti . ' / ' . $f_tidak_diganti + $f_tidak_diperbaiki  . ' = ' . $u_tidak_diganti . '<br>';
-						echo 'tidak | baik = ' . $f_tidak_diperbaiki . ' / ' . $f_tidak_diganti + $f_tidak_diperbaiki  . ' = ' . $u_tidak_diperbaiki . '<br>';
+						// echo 'P : diganti = ' . $diganti . ' / ' . ($diganti + $diperbaiki) . ' = ' . $diganti_rata . '<br>';
+						// echo 'P : diperbaiki = ' . $diperbaiki . ' / ' . ($diganti + $diperbaiki) . ' = ' . $diperbaiki_rata . '<br>';
+						// // pengerjaan
+						// echo '< 1 minggu | ganti = ' . $p_kurang_diganti . ' / ' . $p_kurang_diganti + $p_kurang_diperbaiki . ' = ' . $u_kurang_diganti . '<br>';
+						// echo '< 1 minggu | baik = ' . $p_kurang_diperbaiki . ' / ' . $p_kurang_diganti + $p_kurang_diperbaiki . ' = ' . $u_kurang_diperbaiki . '<br>';
+						// echo '>= minggu | ganti = ' . $p_lebih_diganti . ' / ' . $p_lebih_diganti + $p_lebih_diperbaiki . ' = ' . $p_lebih_diganti / ($p_lebih_diganti + $p_lebih_diperbaiki) . '<br>';
+						// echo '>= minggu | baik = ' . $p_lebih_diperbaiki . ' / ' . $p_lebih_diganti + $p_lebih_diperbaiki . ' = ' . $p_lebih_diperbaiki / ($p_lebih_diganti + $p_lebih_diperbaiki) . '<br>';
+						// // jenis kelamin
+						// echo 'laki laki | ganti = ' . $jk_laki_laki_diganti . ' / ' . $jk_laki_laki_diganti + $jk_laki_laki_diperbaiki  . ' = ' . $u_laki_laki_diganti . '<br>';
+						// echo 'laki laki | baik = ' . $jk_laki_laki_diperbaiki . ' / ' . $jk_laki_laki_diganti + $jk_laki_laki_diperbaiki  . ' = ' . $u_laki_laki_diperbaiki  . '<br>';
+						// echo 'perempuan | ganti = ' . $jk_perempuan_diganti . ' / ' . $jk_perempuan_diganti + $jk_perempuan_diperbaiki  . ' = ' . $jk_perempuan_diganti / ($jk_perempuan_diganti + $jk_perempuan_diperbaiki) . '<br>';
+						// echo 'perempuan | baik = ' . $jk_perempuan_diperbaiki . ' / ' . $jk_perempuan_diganti + $jk_perempuan_diperbaiki  . ' = ' . $jk_perempuan_diperbaiki / ($jk_perempuan_diganti + $jk_perempuan_diperbaiki) . '<br>';
+						// // jenis kelamin
+						// echo 'software | ganti = ' . $t_software_diganti . ' / ' . $t_software_diganti + $t_software_diperbaiki  . ' = ' . $t_software_diganti / ($t_software_diganti + $t_software_diperbaiki) . '<br>';
+						// echo 'software | baik = ' . $t_software_diperbaiki . ' / ' . $t_software_diganti + $t_software_diperbaiki  . ' = ' . $t_software_diperbaiki / ($t_software_diganti + $t_software_diperbaiki) . '<br>';
+						// echo 'hardware | ganti = ' . $t_hardware_diganti . ' / ' . $t_hardware_diganti + $t_hardware_diperbaiki  . ' = ' . $u_hardware_diganti . '<br>';
+						// echo 'hardware | baik = ' . $t_hardware_diperbaiki . ' / ' . $t_hardware_diganti + $t_hardware_diperbaiki  . ' = ' . $u_hardware_diperbaiki . '<br>';
+						// // feedback
+						// echo 'puas | ganti = ' . $f_puas_diganti . ' / ' . $f_puas_diganti + $f_puas_diperbaiki  . ' = ' . $f_puas_diganti / ($f_puas_diganti + $f_puas_diperbaiki) . '<br>';
+						// echo 'puas | baik = ' . $f_puas_diperbaiki . ' / ' . $f_puas_diganti + $f_puas_diperbaiki  . ' = ' . $f_puas_diperbaiki / ($f_puas_diganti + $f_puas_diperbaiki) . '<br>';
+						// echo 'tidak | ganti = ' . $f_tidak_diganti . ' / ' . $f_tidak_diganti + $f_tidak_diperbaiki  . ' = ' . $u_tidak_diganti . '<br>';
+						// echo 'tidak | baik = ' . $f_tidak_diperbaiki . ' / ' . $f_tidak_diganti + $f_tidak_diperbaiki  . ' = ' . $u_tidak_diperbaiki . '<br>';
 						// perhitungan variabel data uji diperbaiki
 						echo '<br> PERHITUNGAN LABEL DIPERBAIKI (' . $diperbaiki_rata . ')<br>';
 						echo 'PENGERJAAN (< 1 minggu) = ' . $u_kurang_diperbaiki . '<br>';
@@ -230,6 +230,13 @@
 						echo 'FEEDBACK (tidak memuaskan) = ' . $u_tidak_diganti . '<br>';
 						echo 'Nilai diganti = ' . $diganti_rata . ' x ' . $u_kurang_diganti . ' x ' . $u_laki_laki_diganti . ' x ' . $u_hardware_diganti . ' x ' . $u_tidak_diganti . ' = ' . $hasil_diganti;
 						?>
+						<br><br>
+						<h4>
+							Berdasarkan perhitungan label yang paling tinggi adalah <?= ($hasil_diganti >  $hasil_diperbaiki) ? '<b>Diganti</b> dengan nilai ' . $hasil_diganti : '<b>DiPerbaiki</b> dengan nilai ' . $hasil_diperbaiki ?>
+						</h4>
+						<h4>
+							Sehingga hasil klasifikasi untuk data uji adalah <?= ($hasil_diganti >  $hasil_diperbaiki) ? '<b>Diganti</b>' : '<b>DiPerbaiki</b>' ?>
+						</h4>
 					</table>
 				</div>
 			</div>
