@@ -73,6 +73,7 @@ class Ticket extends CI_Controller
         							   WHERE A.nik = '$id_user'";
 
 		$row = $this->db->query($cari_data)->row();
+		$data['datagejala'] = $this->model_app->datagejala();
 
 		$data['id_ticket'] = "";
 
@@ -114,6 +115,9 @@ class Ticket extends CI_Controller
 		$problem_summary = strtoupper(trim($this->input->post('problem_summary')));
 		$problem_detail = strtoupper(trim($this->input->post('problem_detail')));
 		$id_teknisi = strtoupper(trim($this->input->post('id_teknisi')));
+		// Ambil data gejala dari POST
+		$gejalaSelected = $this->input->post('gejala');
+
 
 		$data['id_ticket'] = $ticket;
 		$data['reported'] = $id_user;
@@ -125,6 +129,14 @@ class Ticket extends CI_Controller
 		$data['status'] = 1;
 		$data['progress'] = 0;
 		$data['email_user'] = $email;
+		// Jika data gejala terisi (ada checkbox yang dipilih)
+		if (!empty($gejalaSelected)) {
+			// Gabungkan nilai dari checkbox dengan koma sebagai pemisah
+			$data['gejala'] = implode(',', $gejalaSelected);
+		} else {
+			// Jika tidak ada checkbox yang dipilih, set data['gejala'] menjadi string kosong
+			$data['gejala'] = '';
+		}
 
 		$tracking['id_ticket'] = $ticket;
 		$tracking['tanggal'] = $tanggal;
@@ -150,7 +162,7 @@ class Ticket extends CI_Controller
 		} else {
 			// NOTIFIKASI EMAIL
 			require_once("vendor/autoload.php");
-			$config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
+			$config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
 
 			$apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
 				new GuzzleHttp\Client(),

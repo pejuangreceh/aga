@@ -221,7 +221,7 @@ class Model_app extends CI_Model
 
     public function datateknisi()
     {
-        $query = $this->db->query('SELECT A.point, A.id_teknisi, B.nama, B.jk, C.nama_kategori, A.status, A.point FROM teknisi A 
+        $query = $this->db->query('SELECT A.point, A.id_teknisi, B.nama, B.jk, C.nama_kategori, A.status, A.point,A.gejala FROM teknisi A 
                                 LEFT JOIN karyawan B ON B.nik = A.nik
                                 LEFT JOIN kategori C ON C.id_kategori = A.id_kategori
                                 
@@ -379,15 +379,18 @@ class Model_app extends CI_Model
         return $value;
     }
 
-    function dropdown_teknisi($id_kategori)
+    function dropdown_teknisi($id_kategori = NULL)
     {
-
-        $sql = "SELECT A.id_teknisi, B.nama, B.jk, C.nama_kategori, A.status, A.point FROM teknisi A 
-                                LEFT JOIN karyawan B ON B.nik = A.nik
-                                LEFT JOIN kategori C ON C.id_kategori = A.id_kategori
-                                WHERE A.id_kategori ='$id_kategori'";
+        if ($id_kategori == NULL) {
+            $sql = "SELECT A.id_teknisi, B.nama, B.jk, A.status, A.point,A.gejala FROM teknisi A 
+            LEFT JOIN karyawan B ON B.nik = A.nik";
+        } else {
+            $sql = "SELECT A.id_teknisi, B.nama, B.jk, C.nama_kategori, A.status, A.point FROM teknisi A 
+            LEFT JOIN karyawan B ON B.nik = A.nik
+            LEFT JOIN kategori C ON C.id_kategori = A.id_kategori
+            WHERE A.id_kategori ='$id_kategori'";
+        }
         $query = $this->db->query($sql);
-
         $value[''] = '-- PILIH --';
         foreach ($query->result() as $row) {
             $value[$row->id_teknisi] = $row->nama;
@@ -419,5 +422,10 @@ class Model_app extends CI_Model
         $query = $this->db->query("SELECT email_user FROM ticket WHERE id_ticket ='$ticket'");
         $result = $query->row();
         return $result->email_user;
+    }
+    public function datagejala()
+    {
+        $query = $this->db->query('SELECT * FROM gejala');
+        return $query->result();
     }
 }

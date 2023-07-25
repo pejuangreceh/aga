@@ -27,16 +27,20 @@
 								</div>
 							<?php } ?>
 							<div class="form-group">
+								<label>Nama</label>
+								<p class="form-control"><?= $email; ?></p>
+							</div>
+							<div class="form-group">
 								<label>Level</label>
 								<?php echo form_dropdown('id_level', $dd_level, $id_level, ' id="id_level" required class="form-control"'); ?>
 							</div>
 							<div class="form-group">
 								<label>Kantor</label>
-								<input class="form-control" name="kantor" placeholder="kantor" required>
+								<input class="form-control" name="kantor" placeholder="kantor" value="<?= $kantor; ?>" required>
 							</div>
 							<div class="form-group">
 								<label>Cabang</label>
-								<input class="form-control" name="cabang" placeholder="cabang">
+								<input class="form-control" name="cabang" placeholder="cabang" value="<?= $cabang; ?>">
 							</div>
 							<div class="form-group">
 								<label>Jabatan</label>

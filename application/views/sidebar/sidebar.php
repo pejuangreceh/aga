@@ -73,9 +73,9 @@
 			<li><a href="<?php echo base_url(); ?>list_ticket/ticket_list"><svg class="glyph stroked notepad ">
 						<use xlink:href="#stroked-notepad" />
 					</svg> List Ticket</a></li>
-			<li><a href="<?php echo base_url(); ?>list_ticket/klasifikasi"><svg class="glyph stroked notepad ">
+			<!-- <li><a href="<?php echo base_url(); ?>list_ticket/klasifikasi"><svg class="glyph stroked notepad ">
 						<use xlink:href="#stroked-notepad" />
-					</svg> Klasifikasi</a></li>
+					</svg> Klasifikasi</a></li> -->
 			<li><a href="<?php echo base_url(); ?>approval/approval_list"><svg class="glyph stroked email">
 						<use xlink:href="#stroked-email" />
 					</svg>

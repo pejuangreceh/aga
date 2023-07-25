@@ -196,6 +196,12 @@ class User extends CI_Controller
 		$data['dd_level'] = $this->model_app->dropdown_level();
 		$data['id_level'] = $row->level;
 
+		$data['dd_jabatan'] = $this->model_app->dropdown_jabatan();
+		$data['id_jabatan'] = $row->jabatan;
+		$data['kantor'] = $row->kantor;
+		$data['cabang'] = $row->cabang;
+		$data['email'] = $row->email;
+
 		$data['password'] = "";
 		$data['id_user'] = $row->id_user;
 
@@ -211,7 +217,14 @@ class User extends CI_Controller
 
 
 		$id_level = strtoupper(trim($this->input->post('id_level')));
+		$kantor = strtoupper(trim($this->input->post('kantor')));
+		$cabang = strtoupper(trim($this->input->post('cabang')));
+		$id_jabatan = strtoupper(trim($this->input->post('id_jabatan')));
 		$data['level'] = $id_level;
+		$data['kantor'] = $kantor;
+		$data['cabang'] = $cabang;
+		$data['level'] = $id_level;
+		$data['jabatan'] = $id_jabatan;
 
 
 		$this->db->trans_start();
