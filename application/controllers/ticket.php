@@ -162,24 +162,24 @@ class Ticket extends CI_Controller
 		} else {
 			// NOTIFIKASI EMAIL
 			require_once("vendor/autoload.php");
-			$config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
+			// $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
 
-			$apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
-				new GuzzleHttp\Client(),
-				$config
-			);
-			$sendSmtpEmail = new \SendinBlue\Client\Model\SendSmtpEmail();
-			$sendSmtpEmail['subject'] = 'Ticket Created';
-			$sendSmtpEmail['htmlContent'] = "<html><body><h1>Tiket Anda Berhasil Dibuat</h1><p>$tanggal</p><p>$problem_summary</p><p>$problem_detail</p></body></html>";
-			$sendSmtpEmail['sender'] = array('name' => 'Admin', 'email' => 'yabestelloy@gmail.com');
-			$sendSmtpEmail['to'] = array(
-				array('email' => $email, 'name' => $email)
-			);
-			$sendSmtpEmail['replyTo'] = array('email' => 'yohanaadella@gmail.com', 'name' => 'Admin');
-			$sendSmtpEmail['headers'] = array('Some-Custom-Name' => 'unique-id-1234');
-			$sendSmtpEmail['params'] = array('parameter' => 'My param value', 'subject' => 'New Subject');
-			$result = $apiInstance->sendTransacEmail($sendSmtpEmail);
-			print_r($result);
+			// $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
+			// 	new GuzzleHttp\Client(),
+			// 	$config
+			// );
+			// $sendSmtpEmail = new \SendinBlue\Client\Model\SendSmtpEmail();
+			// $sendSmtpEmail['subject'] = 'Ticket Created';
+			// $sendSmtpEmail['htmlContent'] = "<html><body><h1>Tiket Anda Berhasil Dibuat</h1><p>$tanggal</p><p>$problem_summary</p><p>$problem_detail</p></body></html>";
+			// $sendSmtpEmail['sender'] = array('name' => 'Admin', 'email' => 'yabestelloy@gmail.com');
+			// $sendSmtpEmail['to'] = array(
+			// 	array('email' => $email, 'name' => $email)
+			// );
+			// $sendSmtpEmail['replyTo'] = array('email' => 'yohanaadella@gmail.com', 'name' => 'Admin');
+			// $sendSmtpEmail['headers'] = array('Some-Custom-Name' => 'unique-id-1234');
+			// $sendSmtpEmail['params'] = array('parameter' => 'My param value', 'subject' => 'New Subject');
+			// $result = $apiInstance->sendTransacEmail($sendSmtpEmail);
+			// print_r($result);
 			// END NOTIFIKASI EMAIL
 			$this->session->set_flashdata("msg", "<div class='alert bg-success' role='alert'>
 			    <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>

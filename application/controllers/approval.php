@@ -97,25 +97,25 @@ class Approval extends CI_Controller
             redirect('approval/approval_list');
         } else {
             // NOTIFIKASI EMAIL
-            require_once("vendor/autoload.php");
-            $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
+            // require_once("vendor/autoload.php");
+            // $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
 
-            $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
-                new GuzzleHttp\Client(),
-                $config
-            );
-            $sendSmtpEmail = new \SendinBlue\Client\Model\SendSmtpEmail();
-            $sendSmtpEmail['subject'] = 'Ticket Approved';
-            $sendSmtpEmail['htmlContent'] = "<html><body><h1>Tiket Anda Tidak Ditolak</h1><p>Ticket Anda telah ditolak sementara oleh Admin pada tanggal $tanggal</p></body></html>";
-            $sendSmtpEmail['sender'] = array('name' => 'Admin', 'email' => 'yabestelloy@gmail.com');
-            $sendSmtpEmail['to'] = array(
-                array('email' => $email, 'name' => $email)
-            );
-            $sendSmtpEmail['replyTo'] = array('email' => 'yohanaadella@gmail.com', 'name' => 'Admin');
-            $sendSmtpEmail['headers'] = array('Some-Custom-Name' => 'unique-id-1234');
-            $sendSmtpEmail['params'] = array('parameter' => 'My param value', 'subject' => 'New Subject');
-            $result = $apiInstance->sendTransacEmail($sendSmtpEmail);
-            print_r($result);
+            // $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
+            //     new GuzzleHttp\Client(),
+            //     $config
+            // );
+            // $sendSmtpEmail = new \SendinBlue\Client\Model\SendSmtpEmail();
+            // $sendSmtpEmail['subject'] = 'Ticket Approved';
+            // $sendSmtpEmail['htmlContent'] = "<html><body><h1>Tiket Anda Tidak Ditolak</h1><p>Ticket Anda telah ditolak sementara oleh Admin pada tanggal $tanggal</p></body></html>";
+            // $sendSmtpEmail['sender'] = array('name' => 'Admin', 'email' => 'yabestelloy@gmail.com');
+            // $sendSmtpEmail['to'] = array(
+            //     array('email' => $email, 'name' => $email)
+            // );
+            // $sendSmtpEmail['replyTo'] = array('email' => 'yohanaadella@gmail.com', 'name' => 'Admin');
+            // $sendSmtpEmail['headers'] = array('Some-Custom-Name' => 'unique-id-1234');
+            // $sendSmtpEmail['params'] = array('parameter' => 'My param value', 'subject' => 'New Subject');
+            // $result = $apiInstance->sendTransacEmail($sendSmtpEmail);
+            // print_r($result);
             // END NOTIFIKASI EMAIL
             redirect('approval/approval_list');
         }
@@ -182,25 +182,25 @@ class Approval extends CI_Controller
             redirect('approval/approval_list');
         } else {
             // NOTIFIKASI EMAIL
-            require_once("vendor/autoload.php");
-            $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
+            // require_once("vendor/autoload.php");
+            // $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
 
-            $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
-                new GuzzleHttp\Client(),
-                $config
-            );
-            $sendSmtpEmail = new \SendinBlue\Client\Model\SendSmtpEmail();
-            $sendSmtpEmail['subject'] = 'Ticket Approved';
-            $sendSmtpEmail['htmlContent'] = "<html><body><h1>Tiket Anda Sudah Disetujui</h1><p>Ticket Anda telah disetujui Admin pada tanggal $tanggal</p></body></html>";
-            $sendSmtpEmail['sender'] = array('name' => 'Admin', 'email' => 'yabestelloy@gmail.com');
-            $sendSmtpEmail['to'] = array(
-                array('email' => $email, 'name' => $email)
-            );
-            $sendSmtpEmail['replyTo'] = array('email' => 'yohanaadella@gmail.com', 'name' => 'Admin');
-            $sendSmtpEmail['headers'] = array('Some-Custom-Name' => 'unique-id-1234');
-            $sendSmtpEmail['params'] = array('parameter' => 'My param value', 'subject' => 'New Subject');
-            $result = $apiInstance->sendTransacEmail($sendSmtpEmail);
-            print_r($result);
+            // $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
+            //     new GuzzleHttp\Client(),
+            //     $config
+            // );
+            // $sendSmtpEmail = new \SendinBlue\Client\Model\SendSmtpEmail();
+            // $sendSmtpEmail['subject'] = 'Ticket Approved';
+            // $sendSmtpEmail['htmlContent'] = "<html><body><h1>Tiket Anda Sudah Disetujui</h1><p>Ticket Anda telah disetujui Admin pada tanggal $tanggal</p></body></html>";
+            // $sendSmtpEmail['sender'] = array('name' => 'Admin', 'email' => 'yabestelloy@gmail.com');
+            // $sendSmtpEmail['to'] = array(
+            //     array('email' => $email, 'name' => $email)
+            // );
+            // $sendSmtpEmail['replyTo'] = array('email' => 'yohanaadella@gmail.com', 'name' => 'Admin');
+            // $sendSmtpEmail['headers'] = array('Some-Custom-Name' => 'unique-id-1234');
+            // $sendSmtpEmail['params'] = array('parameter' => 'My param value', 'subject' => 'New Subject');
+            // $result = $apiInstance->sendTransacEmail($sendSmtpEmail);
+            // print_r($result);
             // END NOTIFIKASI EMAIL
             redirect('approval/approval_list');
         }
